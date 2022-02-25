@@ -18,7 +18,7 @@ class Log:
 
     async def error(self, message):
         f = open(self.file, "a")
-        f.write(f"[{datetime.datetime.now().strftime('%c')}] ERROR] {message}\n")
+        f.write(f"[{datetime.datetime.now().strftime('%c')}] [ERROR] {message}\n")
         f.close()
         channel = self.bot.get_channel(900564880912953424)
         await channel.send(f"```py\n{message}\n```")

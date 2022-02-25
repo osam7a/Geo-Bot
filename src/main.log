@@ -11,3 +11,49 @@
 [Fri Feb 25 23:09:13 2022] [INFO] Bot initialized
 [Fri Feb 25 23:09:17 2022] [INFO] Cogs loaded successfully
 [Fri Feb 25 23:09:17 2022] [INFO] Latency: 195ms
+[Fri Feb 25 23:15:41 2022] [INFO] Bot initialized
+[Fri Feb 25 23:15:45 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:15:45 2022] [INFO] Latency: 197ms
+[Fri Feb 25 23:21:18 2022] [INFO] Bot initialized
+[Fri Feb 25 23:21:21 2022] ERROR] Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\importlib\util.py", line 96, in find_spec
+    parent_path = parent.__path__
+AttributeError: module 'src.cogs.images' has no attribute '__path__'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\osama\PycharmProjects\Geo Bot\src\bot.py", line 23, in on_ready
+    self.load_extension(f"src.cogs.{i}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 486, in load_extension
+    spec = importlib.util.find_spec(name)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\importlib\util.py", line 98, in find_spec
+    raise ModuleNotFoundError(
+ModuleNotFoundError: __path__ attribute not found on 'src.cogs.images' while trying to find 'src.cogs.images.py'
+
+[Fri Feb 25 23:21:21 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:21:21 2022] [INFO] Latency: 199ms
+[Fri Feb 25 23:22:31 2022] [INFO] Bot initialized
+[Fri Feb 25 23:22:35 2022] [INFO] Loaded images
+[Fri Feb 25 23:22:35 2022] [ERROR] Traceback (most recent call last):
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 424, in _load_from_module_spec
+    setup = getattr(lib, "setup")
+AttributeError: module 'src.cogs.__pycache__' has no attribute 'setup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\osama\PycharmProjects\Geo Bot\src\bot.py", line 24, in on_ready
+    self.load_extension(f"src.cogs.{i}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 490, in load_extension
+    self._load_from_module_spec(spec, name)
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 427, in _load_from_module_spec
+    raise errors.NoEntryPointError(key)
+disnake.ext.commands.errors.NoEntryPointError: Extension 'src.cogs.__pycache__' has no 'setup' function.
+
+[Fri Feb 25 23:22:36 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:22:36 2022] [INFO] Latency: 316ms
+[Fri Feb 25 23:23:02 2022] [INFO] Bot initialized
+[Fri Feb 25 23:23:06 2022] [INFO] Loaded images
+[Fri Feb 25 23:23:06 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:23:06 2022] [INFO] Latency: 229ms

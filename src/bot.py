@@ -20,6 +20,8 @@ class GeoBot(Bot):
     async def on_ready(self):
         for i in os.listdir("src/cogs"):
             try:
+              if i.endswith(".py"):
+                i = i.strip(".py")
                 self.load_extension(f"src.cogs.{i}")
                 self.log.info(f"Loaded {i}")
             except Exception as e:
@@ -30,5 +32,3 @@ class GeoBot(Bot):
         self.log.info("Cogs loaded successfully")
         print(f"Latency: {round(self.latency * 1000)}ms")
         self.log.info(f"Latency: {round(self.latency * 1000)}ms")
-
-
