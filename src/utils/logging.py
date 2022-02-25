@@ -1,6 +1,6 @@
 import datetime
 
-
+# Logging
 class Log:
     def __init__(self, file, bot):
         self.file = file
