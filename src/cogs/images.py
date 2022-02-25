@@ -79,7 +79,7 @@ class Images(Cog):
         if user.avatar == None:
             return await emb(ctx, f"{user.mention} Doesnt have an avatar...")
         await sendOverlay(ctx, "/canvas/brightness",
-                          { "avatar": user.avatar.with_format('png').url, "brightness": brightness }, user)
+                          { "avatar": user.avatar.with_format('png').url, "brightness": str(brightness) }, user)
 
     @command(aliases = ['pixels', 'lowres', 'lowresolution'])
     async def pixelate(self, ctx, *, user: Member = None):
@@ -113,11 +113,11 @@ class Images(Cog):
     async def youtube(self, ctx, user: Union[Member, str] = None, *, message = None):
         if not user and not message:
             raise MissingRequiredArgument(Parameter('user', Parameter.POSITIONAL_ONLY, default = None))
-        elif user and not message:
-            raise MissingRequiredArgument(Parameter('message', Parameter.POSITIONAL_ONLY, default = None))
         if isinstance(user, str):
             message = ctx.message.content[len(ctx.prefix) + len(ctx.command.name) + 1:]
             user = ctx.author
+        if len(message) > 33:
+            return await emb(ctx, f"Maximum character limit reached (33)")
         if user.avatar == None:
             return await emb(ctx, f"{user.mention} Doesnt have an avatar...")
         await sendOverlay(ctx, "/canvas/youtube-comment",
@@ -128,11 +128,11 @@ class Images(Cog):
     async def stupid(self, ctx, user: Union[Member, str] = None, *, message = None):
         if not user and not message:
             raise MissingRequiredArgument(Parameter('user', Parameter.POSITIONAL_ONLY, default = None))
-        elif user and not message:
-            raise MissingRequiredArgument(Parameter('message', Parameter.POSITIONAL_ONLY, default = None))
         if isinstance(user, str):
             message = ctx.message.content[len(ctx.prefix) + len(ctx.command.name) + 1:]
             user = ctx.author
+        if len(message) > 15:
+            return await emb(ctx, f"Maximum character limit allowed is 15.")
         if user.avatar == None:
             return await emb(ctx, f"{user.mention} Doesnt have an avatar...")
         await sendOverlay(ctx, "/canvas/its-so-stupid",

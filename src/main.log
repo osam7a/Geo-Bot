@@ -57,3 +57,27 @@ disnake.ext.commands.errors.NoEntryPointError: Extension 'src.cogs.__pycache__' 
 [Fri Feb 25 23:23:06 2022] [INFO] Loaded images
 [Fri Feb 25 23:23:06 2022] [INFO] Cogs loaded successfully
 [Fri Feb 25 23:23:06 2022] [INFO] Latency: 229ms
+[Fri Feb 25 23:32:54 2022] [INFO] Bot initialized
+[Fri Feb 25 23:32:57 2022] [INFO] Loaded images
+[Fri Feb 25 23:32:57 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:32:57 2022] [INFO] Latency: 305ms
+[Fri Feb 25 23:36:54 2022] [INFO] Bot initialized
+[Fri Feb 25 23:36:58 2022] [INFO] Loaded images
+[Fri Feb 25 23:36:58 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:36:58 2022] [INFO] Latency: 318ms
+[Fri Feb 25 23:37:51 2022] [INFO] Bot initialized
+[Fri Feb 25 23:37:55 2022] [INFO] Loaded images
+[Fri Feb 25 23:37:55 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:37:55 2022] [INFO] Latency: 307ms
+[Fri Feb 25 23:38:19 2022] [INFO] Bot initialized
+[Fri Feb 25 23:38:22 2022] [INFO] Loaded images
+[Fri Feb 25 23:38:22 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:38:22 2022] [INFO] Latency: 214ms
+[Fri Feb 25 23:41:57 2022] [INFO] Bot initialized
+[Fri Feb 25 23:42:01 2022] [INFO] Loaded images
+[Fri Feb 25 23:42:01 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:42:01 2022] [INFO] Latency: 312ms
+[Fri Feb 25 23:47:37 2022] [INFO] Bot initialized
+[Fri Feb 25 23:47:41 2022] [INFO] Loaded images
+[Fri Feb 25 23:47:41 2022] [INFO] Cogs loaded successfully
+[Fri Feb 25 23:47:41 2022] [INFO] Latency: 197ms
