@@ -1,6 +1,12 @@
 from disnake import Embed, Member, Colour
+import requests
 
 color = Colour.blue()
+
+def get(host, endpoint, params: dict):
+    knownHosts = {'sra': 'some-random-api.ml'}
+    request = requests.get(f"https://{knownHosts[host] if knownHosts[host] else host}{endpoint}", params = params)
+    return request
 
 async def emb(ctx, message, user = None, colorarg = None, **kwargs):
     user = user or ctx.author

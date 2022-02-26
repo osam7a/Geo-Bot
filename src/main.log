@@ -105,3 +105,68 @@ disnake.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'src.cogs.images' 
 [Sat Feb 26 17:37:29 2022] [INFO] Loaded misc
 [Sat Feb 26 17:37:29 2022] [INFO] Cogs loaded successfully
 [Sat Feb 26 17:37:29 2022] [INFO] Latency: 206ms
+[Sat Feb 26 17:39:11 2022] [INFO] Bot initialized
+[Sat Feb 26 17:39:14 2022] [INFO] Loaded images
+[Sat Feb 26 17:39:14 2022] [INFO] Loaded misc
+[Sat Feb 26 17:39:14 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 17:39:14 2022] [INFO] Latency: 314ms
+[Sat Feb 26 17:48:19 2022] [INFO] Bot initialized
+[Sat Feb 26 17:48:23 2022] [INFO] Loaded images
+[Sat Feb 26 17:48:23 2022] [INFO] Loaded misc
+[Sat Feb 26 17:48:23 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 17:48:23 2022] [INFO] Latency: 230ms
+[Sat Feb 26 17:48:55 2022] [INFO] Bot initialized
+[Sat Feb 26 17:48:58 2022] [INFO] Loaded images
+[Sat Feb 26 17:48:58 2022] [INFO] Loaded misc
+[Sat Feb 26 17:48:58 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 17:48:58 2022] [INFO] Latency: 312ms
+[Sat Feb 26 17:49:37 2022] [INFO] Bot initialized
+[Sat Feb 26 17:49:40 2022] [INFO] Loaded images
+[Sat Feb 26 17:49:40 2022] [INFO] Loaded misc
+[Sat Feb 26 17:49:40 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 17:49:40 2022] [INFO] Latency: 197ms
+[Sat Feb 26 17:52:25 2022] [INFO] Bot initialized
+[Sat Feb 26 17:52:29 2022] [INFO] Loaded images
+[Sat Feb 26 17:52:29 2022] [INFO] Loaded misc
+[Sat Feb 26 17:52:29 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 17:52:29 2022] [INFO] Latency: 305ms
+[Sat Feb 26 17:54:17 2022] [INFO] Bot initialized
+[Sat Feb 26 17:54:20 2022] [INFO] Loaded images
+[Sat Feb 26 17:54:20 2022] [INFO] Loaded misc
+[Sat Feb 26 17:54:20 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 17:54:20 2022] [INFO] Latency: 199ms
+[Sat Feb 26 17:55:07 2022] [INFO] Bot initialized
+[Sat Feb 26 17:55:11 2022] [INFO] Loaded images
+[Sat Feb 26 17:55:11 2022] [INFO] Loaded misc
+[Sat Feb 26 17:55:11 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 17:55:11 2022] [INFO] Latency: 200ms
+[Sat Feb 26 17:56:10 2022] [INFO] Bot initialized
+[Sat Feb 26 17:56:15 2022] [INFO] Loaded images
+[Sat Feb 26 17:56:15 2022] [INFO] Loaded misc
+[Sat Feb 26 17:56:15 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 17:56:15 2022] [INFO] Latency: 315ms
+[Sat Feb 26 17:56:52 2022] [INFO] Bot initialized
+[Sat Feb 26 17:56:56 2022] [INFO] Loaded images
+[Sat Feb 26 17:56:56 2022] [INFO] Loaded misc
+[Sat Feb 26 17:56:56 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 17:56:56 2022] [INFO] Latency: 304ms
+[Sat Feb 26 18:09:54 2022] [INFO] Bot initialized
+[Sat Feb 26 18:09:58 2022] [INFO] Loaded images
+[Sat Feb 26 18:09:58 2022] [INFO] Loaded misc
+[Sat Feb 26 18:09:58 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:09:58 2022] [INFO] Latency: 317ms
+[Sat Feb 26 18:10:32 2022] [INFO] Bot initialized
+[Sat Feb 26 18:10:36 2022] [INFO] Loaded images
+[Sat Feb 26 18:10:36 2022] [INFO] Loaded misc
+[Sat Feb 26 18:10:36 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:10:36 2022] [INFO] Latency: 204ms
+[Sat Feb 26 18:11:56 2022] [INFO] Bot initialized
+[Sat Feb 26 18:12:00 2022] [INFO] Loaded fun
+[Sat Feb 26 18:12:00 2022] [INFO] Loaded images
+[Sat Feb 26 18:12:00 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:12:00 2022] [INFO] Latency: 316ms
+[Sat Feb 26 18:13:10 2022] [INFO] Bot initialized
+[Sat Feb 26 18:13:14 2022] [INFO] Loaded fun
+[Sat Feb 26 18:13:14 2022] [INFO] Loaded images
+[Sat Feb 26 18:13:14 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:13:14 2022] [INFO] Latency: 319ms
