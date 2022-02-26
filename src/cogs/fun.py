@@ -143,8 +143,10 @@ class Fun(Cog):
                 _json = await res.json()
                 await ctx.send(f"\"{_json['quote']}\" - {_json['author']}")
 
-    @command()
+    @command(alaises = ['ascii', 'text2art'])
     async def textart(self, ctx, *, message):
+        if len(message) > 13:
+            return await ctx.reply("Message too long")
         ref = ctx.message.reference
         try:
             msg = self.bot.get_message(ref.message_id)
@@ -211,10 +213,10 @@ class Fun(Cog):
         msg = await emb(ctx, f"Hacking {user.mention}...")
         await asyncio.sleep(1.5)
         for k, v in sentences.items():
-            await msg.edit(embed = Embed(title = f"{k}", color = self.bot.color))
-            await asyncio.sleep(1.25)
-            await msg.edit(embed = Embed(title = f"{k}", description = v, color = self.bot.color))
-            await asyncio.sleep(1.25)
+            await msg.edit(embed = Embed(title = f"{k}", color = color))
+            await asyncio.sleep(1.5)
+            await msg.edit(embed = Embed(title = f"{k}", description = v, color = color))
+            await asyncio.sleep(1.5)
         await msg.edit(content = f"The totally real hack just finished...")
 def setup(bot):
     bot.add_cog(Fun(bot))

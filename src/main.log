@@ -170,3 +170,54 @@ disnake.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'src.cogs.images' 
 [Sat Feb 26 18:13:14 2022] [INFO] Loaded images
 [Sat Feb 26 18:13:14 2022] [INFO] Cogs loaded successfully
 [Sat Feb 26 18:13:14 2022] [INFO] Latency: 319ms
+[Sat Feb 26 18:22:07 2022] [INFO] Bot initialized
+[Sat Feb 26 18:22:11 2022] [INFO] Loaded fun
+[Sat Feb 26 18:22:11 2022] [INFO] Loaded images
+[Sat Feb 26 18:22:11 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:22:11 2022] [INFO] Latency: 218ms
+[Sat Feb 26 18:22:38 2022] [INFO] Bot initialized
+[Sat Feb 26 18:22:41 2022] [INFO] Loaded fun
+[Sat Feb 26 18:22:42 2022] [INFO] Loaded images
+[Sat Feb 26 18:22:42 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:22:42 2022] [INFO] Latency: 196ms
+[Sat Feb 26 18:23:23 2022] [INFO] Bot initialized
+[Sat Feb 26 18:23:27 2022] [INFO] Loaded fun
+[Sat Feb 26 18:23:27 2022] [INFO] Loaded images
+[Sat Feb 26 18:23:27 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:23:27 2022] [INFO] Latency: 315ms
+[Sat Feb 26 18:23:55 2022] [INFO] Bot initialized
+[Sat Feb 26 18:23:59 2022] [INFO] Loaded fun
+[Sat Feb 26 18:23:59 2022] [INFO] Loaded images
+[Sat Feb 26 18:23:59 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:23:59 2022] [INFO] Latency: 219ms
+[Sat Feb 26 18:24:47 2022] [INFO] Bot initialized
+[Sat Feb 26 18:24:51 2022] [INFO] Loaded fun
+[Sat Feb 26 18:24:51 2022] [INFO] Loaded images
+[Sat Feb 26 18:24:51 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:24:51 2022] [INFO] Latency: 317ms
+[Sat Feb 26 18:27:10 2022] [INFO] Bot initialized
+[Sat Feb 26 18:27:14 2022] [INFO] Loaded fun
+[Sat Feb 26 18:27:14 2022] [INFO] Loaded images
+[Sat Feb 26 18:27:14 2022] [INFO] Cogs loaded successfully
+[Sat Feb 26 18:27:14 2022] [INFO] Latency: 311ms
+[Sun Feb 27 00:30:06 2022] [ERROR] Traceback (most recent call last):
+  File "C:\Users\osama\PycharmProjects\Geo Bot\src\bot.py", line 25, in on_ready
+    self.load_extension(f"src.cogs.{i}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 484, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+disnake.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'src.cogs.fun' is already loaded.
+
+[Sun Feb 27 00:30:07 2022] [ERROR] Traceback (most recent call last):
+  File "C:\Users\osama\PycharmProjects\Geo Bot\src\bot.py", line 25, in on_ready
+    self.load_extension(f"src.cogs.{i}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 484, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+disnake.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'src.cogs.images' is already loaded.
+
+[Sun Feb 27 00:30:07 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 00:30:07 2022] [INFO] Latency: 4997ms
+[Sun Feb 27 00:31:04 2022] [INFO] Bot initialized
+[Sun Feb 27 00:31:08 2022] [INFO] Loaded fun
+[Sun Feb 27 00:31:08 2022] [INFO] Loaded images
+[Sun Feb 27 00:31:08 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 00:31:08 2022] [INFO] Latency: 307ms
