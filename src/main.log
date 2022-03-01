@@ -221,3 +221,141 @@ disnake.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'src.cogs.images' 
 [Sun Feb 27 00:31:08 2022] [INFO] Loaded images
 [Sun Feb 27 00:31:08 2022] [INFO] Cogs loaded successfully
 [Sun Feb 27 00:31:08 2022] [INFO] Latency: 307ms
+[Sun Feb 27 00:33:59 2022] [INFO] Bot initialized
+[Sun Feb 27 00:34:03 2022] [INFO] Loaded fun
+[Sun Feb 27 00:34:03 2022] [INFO] Loaded images
+[Sun Feb 27 00:34:03 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 00:34:03 2022] [INFO] Latency: 313ms
+[Sun Feb 27 00:34:09 2022] [INFO] Bot initialized
+[Sun Feb 27 00:34:13 2022] [INFO] Loaded fun
+[Sun Feb 27 00:34:13 2022] [INFO] Loaded images
+[Sun Feb 27 00:34:13 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 00:34:13 2022] [INFO] Latency: 316ms
+[Sun Feb 27 01:23:21 2022] [INFO] Bot initialized
+[Sun Feb 27 01:23:25 2022] [INFO] Loaded fun
+[Sun Feb 27 01:23:25 2022] [INFO] Loaded images
+[Sun Feb 27 01:23:25 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 01:23:25 2022] [INFO] Latency: 198ms
+[Sun Feb 27 01:24:30 2022] [INFO] Bot initialized
+[Sun Feb 27 01:24:35 2022] [INFO] Loaded fun
+[Sun Feb 27 01:24:35 2022] [INFO] Loaded images
+[Sun Feb 27 01:24:35 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 01:24:35 2022] [INFO] Latency: 305ms
+[Sun Feb 27 01:25:46 2022] [INFO] Bot initialized
+[Sun Feb 27 01:25:50 2022] [INFO] Loaded fun
+[Sun Feb 27 01:25:50 2022] [INFO] Loaded images
+[Sun Feb 27 01:25:50 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 01:25:50 2022] [INFO] Latency: 303ms
+[Sun Feb 27 01:30:29 2022] [INFO] Bot initialized
+[Sun Feb 27 01:30:33 2022] [INFO] Loaded fun
+[Sun Feb 27 01:30:33 2022] [INFO] Loaded images
+[Sun Feb 27 01:30:33 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 01:30:33 2022] [INFO] Latency: 215ms
+[Sun Feb 27 01:44:23 2022] [ERROR] Traceback (most recent call last):
+  File "C:\Users\osama\PycharmProjects\Geo Bot\src\bot.py", line 25, in on_ready
+    self.load_extension(f"src.cogs.{i}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 484, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+disnake.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'src.cogs.fun' is already loaded.
+
+[Sun Feb 27 01:44:24 2022] [ERROR] Traceback (most recent call last):
+  File "C:\Users\osama\PycharmProjects\Geo Bot\src\bot.py", line 25, in on_ready
+    self.load_extension(f"src.cogs.{i}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 484, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+disnake.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'src.cogs.images' is already loaded.
+
+[Sun Feb 27 01:44:24 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 01:44:24 2022] [INFO] Latency: 5006ms
+[Sun Feb 27 01:55:31 2022] [INFO] Bot initialized
+[Sun Feb 27 01:55:35 2022] [INFO] Loaded fun
+[Sun Feb 27 01:55:35 2022] [INFO] Loaded images
+[Sun Feb 27 01:55:35 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 01:55:35 2022] [INFO] Latency: 201ms
+[Sun Feb 27 05:54:04 2022] [ERROR] Traceback (most recent call last):
+  File "C:\Users\osama\PycharmProjects\Geo Bot\src\bot.py", line 25, in on_ready
+    self.load_extension(f"src.cogs.{i}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 484, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+disnake.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'src.cogs.fun' is already loaded.
+
+[Sun Feb 27 05:54:05 2022] [ERROR] Traceback (most recent call last):
+  File "C:\Users\osama\PycharmProjects\Geo Bot\src\bot.py", line 25, in on_ready
+    self.load_extension(f"src.cogs.{i}")
+  File "C:\Users\osama\AppData\Local\Programs\Python\Python310\lib\site-packages\disnake\ext\commands\common_bot_base.py", line 484, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+disnake.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'src.cogs.images' is already loaded.
+
+[Sun Feb 27 05:54:05 2022] [INFO] Cogs loaded successfully
+[Sun Feb 27 05:54:05 2022] [INFO] Latency: 5013ms
+[Wed Mar  2 00:38:58 2022] [INFO] Bot initialized
+[Wed Mar  2 00:39:02 2022] [INFO] Loaded fun
+[Wed Mar  2 00:39:02 2022] [INFO] Loaded images
+[Wed Mar  2 00:39:02 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:39:02 2022] [INFO] Latency: 220ms
+[Wed Mar  2 00:51:28 2022] [INFO] Bot initialized
+[Wed Mar  2 00:51:32 2022] [INFO] Loaded fun
+[Wed Mar  2 00:51:32 2022] [INFO] Loaded images
+[Wed Mar  2 00:51:32 2022] [INFO] Loaded listeners
+[Wed Mar  2 00:51:32 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:51:32 2022] [INFO] Latency: 195ms
+[Wed Mar  2 00:52:17 2022] [INFO] Bot initialized
+[Wed Mar  2 00:52:21 2022] [INFO] Loaded fun
+[Wed Mar  2 00:52:21 2022] [INFO] Loaded images
+[Wed Mar  2 00:52:21 2022] [INFO] Loaded listeners
+[Wed Mar  2 00:52:21 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:52:21 2022] [INFO] Latency: 313ms
+[Wed Mar  2 00:53:11 2022] [INFO] Bot initialized
+[Wed Mar  2 00:53:15 2022] [INFO] Loaded fun
+[Wed Mar  2 00:53:15 2022] [INFO] Loaded images
+[Wed Mar  2 00:53:15 2022] [INFO] Loaded listeners
+[Wed Mar  2 00:53:15 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:53:15 2022] [INFO] Latency: 303ms
+[Wed Mar  2 00:53:53 2022] [INFO] Bot initialized
+[Wed Mar  2 00:53:57 2022] [INFO] Loaded fun
+[Wed Mar  2 00:53:57 2022] [INFO] Loaded images
+[Wed Mar  2 00:53:57 2022] [INFO] Loaded listeners
+[Wed Mar  2 00:53:57 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:53:57 2022] [INFO] Latency: 317ms
+[Wed Mar  2 00:54:30 2022] [INFO] Bot initialized
+[Wed Mar  2 00:54:35 2022] [INFO] Loaded fun
+[Wed Mar  2 00:54:35 2022] [INFO] Loaded images
+[Wed Mar  2 00:54:35 2022] [INFO] Loaded listeners
+[Wed Mar  2 00:54:35 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:54:35 2022] [INFO] Latency: 306ms
+[Wed Mar  2 00:55:41 2022] [INFO] Bot initialized
+[Wed Mar  2 00:55:45 2022] [INFO] Loaded fun
+[Wed Mar  2 00:55:45 2022] [INFO] Loaded images
+[Wed Mar  2 00:55:45 2022] [INFO] Loaded listeners
+[Wed Mar  2 00:55:45 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:55:45 2022] [INFO] Latency: 314ms
+[Wed Mar  2 00:56:55 2022] [INFO] Bot initialized
+[Wed Mar  2 00:56:58 2022] [INFO] Loaded fun
+[Wed Mar  2 00:56:58 2022] [INFO] Loaded images
+[Wed Mar  2 00:56:58 2022] [INFO] Loaded listeners
+[Wed Mar  2 00:56:58 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:56:58 2022] [INFO] Latency: 201ms
+[Wed Mar  2 00:58:42 2022] [INFO] Bot initialized
+[Wed Mar  2 00:58:46 2022] [INFO] Loaded fun
+[Wed Mar  2 00:58:46 2022] [INFO] Loaded images
+[Wed Mar  2 00:58:46 2022] [INFO] Loaded listeners
+[Wed Mar  2 00:58:46 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:58:46 2022] [INFO] Latency: 304ms
+[Wed Mar  2 00:59:54 2022] [INFO] Bot initialized
+[Wed Mar  2 00:59:58 2022] [INFO] Loaded fun
+[Wed Mar  2 00:59:58 2022] [INFO] Loaded images
+[Wed Mar  2 00:59:58 2022] [INFO] Loaded listeners
+[Wed Mar  2 00:59:58 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 00:59:58 2022] [INFO] Latency: 323ms
+[Wed Mar  2 01:00:53 2022] [INFO] Bot initialized
+[Wed Mar  2 01:00:57 2022] [INFO] Loaded fun
+[Wed Mar  2 01:00:57 2022] [INFO] Loaded images
+[Wed Mar  2 01:00:57 2022] [INFO] Loaded listeners
+[Wed Mar  2 01:00:57 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 01:00:57 2022] [INFO] Latency: 210ms
+[Wed Mar  2 01:02:17 2022] [INFO] Bot initialized
+[Wed Mar  2 01:02:21 2022] [INFO] Loaded fun
+[Wed Mar  2 01:02:21 2022] [INFO] Loaded images
+[Wed Mar  2 01:02:21 2022] [INFO] Loaded listeners
+[Wed Mar  2 01:02:21 2022] [INFO] Cogs loaded successfully
+[Wed Mar  2 01:02:21 2022] [INFO] Latency: 304ms

@@ -1,4 +1,6 @@
 import base64
+import json
+
 import aiohttp
 import random
 import asyncio
@@ -143,7 +145,7 @@ class Fun(Cog):
                 _json = await res.json()
                 await ctx.send(f"\"{_json['quote']}\" - {_json['author']}")
 
-    @command(alaises = ['ascii', 'text2art'])
+    @command(aliases = ['ascii', 'text2art'])
     async def textart(self, ctx, *, message):
         if len(message) > 13:
             return await ctx.reply("Message too long")
@@ -155,6 +157,43 @@ class Fun(Cog):
         except:
             await ctx.reply(
                 f"```\n{'shortened text (less than 15)' if len(message) > 15 else ''}\n{text2art(message if len(message) < 15 else message[:15])}\n```")
+
+    @command()
+    async def snipe(self, ctx):
+        with open("src/dicts/snipe.json") as f:
+            load = json.load(f)
+            if len(load) == 0:
+                return await emb(ctx, "No one ever deleted a message at this moment!", color = Color.red())
+            lastMsg = load[-1]
+            result = ""
+            author = await self.bot.fetch_user(lastMsg['author'])
+            if lastMsg['reference'] != None:
+                msg = self.bot.get_message(lastMsg['reference'])
+                if msg != None:
+                   result += f"{author} replying to {msg.author.mention} \"{msg.content}\": \n{lastMsg['message']}"
+                else: result += f"{author}: {lastMsg['message']}"
+
+            else:
+                result += f"{author}: {lastMsg['message']}"
+            await emb(ctx, result)
+    @command()
+    async def meme(self, ctx):
+        async with aiohttp.ClientSession() as cs:
+            async with cs.get(f"https://www.reddit.com/r/{random.choice(['memes', 'dankmemes', 'wholesomememes', 'historymemes'])}.json?nsfw=false") as resp:
+                _json = await resp.json()
+                randomPost = random.choice(_json['data']['children'])['data']
+                title = randomPost['title']
+                postLink = "https://reddit.com" + randomPost['permalink']
+                imageUrl = randomPost['url_overridden_by_dest']
+                footer = f"Author: {randomPost['author']} this post had {randomPost['ups']} upvotes and {randomPost['downs']} downvotes"
+                await ctx.send(embed = Embed(
+                    title = title, url = postLink,
+                    color = color
+                ).set_image(
+                    url = imageUrl
+                ).set_footer(
+                    text = footer
+                ))
 
     @command()
     async def binary(self, ctx, encodeordecode, *, message):
