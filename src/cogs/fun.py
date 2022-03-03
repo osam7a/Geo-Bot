@@ -15,6 +15,11 @@ from ..utils.utils import emb, color, get
 class Fun(Cog):
     def __init__(self, bot):
         self.bot = bot
+    @staticmethod
+    def scrambled(orig):
+        dest = orig[:]
+        random.shuffle(dest)
+        return dest
 
     @command()
     async def trivia(self, ctx):
@@ -97,7 +102,7 @@ class Fun(Cog):
                     choices.append(base64.b64decode(i.encode()).decode())
                 choicesStr = ""
                 chDict = { }
-                for _i, v in enumerate(choices):
+                for _i, v in enumerate(self.scrambled(choices)):
                     choicesStr += f"**{_i + 1}.** {v}\n"
                     chDict[_i + 1] = v
                 await ctx.reply(embed = Embed(
@@ -124,9 +129,9 @@ class Fun(Cog):
     @command()
     async def fact(self, ctx):
         async with aiohttp.ClientSession() as cs:
-            async with cs.get("https://api.aakhilv.me/facts") as resp:
+            async with cs.get("https://uselessfacts.jsph.pl/random.json?language=en") as resp:
                 _json = await resp.json()
-                fact = _json[0]
+                fact = _json['text']
                 await ctx.send(f"**{fact}**")
 
     @command()
@@ -179,12 +184,14 @@ class Fun(Cog):
     @command()
     async def meme(self, ctx):
         async with aiohttp.ClientSession() as cs:
-            async with cs.get(f"https://www.reddit.com/r/{random.choice(['memes', 'dankmemes', 'wholesomememes', 'historymemes'])}.json?nsfw=false") as resp:
+            async with cs.get(f"https://www.reddit.com/r/{random.choice(['memes', 'dankmemes', 'wholesomememes', 'historymemes', 'geographymemes', 'antimeme'])}.json?nsfw=false") as resp:
                 _json = await resp.json()
                 randomPost = random.choice(_json['data']['children'])['data']
                 title = randomPost['title']
                 postLink = "https://reddit.com" + randomPost['permalink']
-                imageUrl = randomPost['url_overridden_by_dest']
+                try:
+                    imageUrl = randomPost['url_overridden_by_dest']
+                except: imageUrl = 'https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg'
                 footer = f"Author: {randomPost['author']} this post had {randomPost['ups']} upvotes and {randomPost['downs']} downvotes"
                 await ctx.send(embed = Embed(
                     title = title, url = postLink,
