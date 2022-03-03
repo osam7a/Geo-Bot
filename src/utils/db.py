@@ -42,13 +42,26 @@ class DBmember(aobject):
         warns = a[0][0]
         return warns
 
-    @warns.setter
-    async def warn(self, other):
+    async def setWarns(self, other):
         cursor = await self.conn.cursor()
         await cursor.execute(f"UPDATE {self.table} SET warns={other} WHERE id={self.id}")
         await self.conn.commit()
         await cursor.close()
 
+    @property
+    async def prefix(self):
+        cursor = await self.conn.cursor()
+        await cursor.execute(f"SELECT prefix FROM {self.table} WHERE id={self.id}")
+        a = await cursor.fetchall()
+        await cursor.close()
+        prefix = a[0][0]
+        return prefix
+
+    async def setPrefix(self, other):
+        cursor = await self.conn.cursor()
+        await cursor.execute(f"UPDATE {self.table} SET prefix=\"{other}\" WHERE id={self.id}")
+        await self.conn.commit()
+        await cursor.close()
 class Database:
     def __init__(self, file, table, tableArgs):
         self.file = file

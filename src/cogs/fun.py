@@ -10,7 +10,7 @@ from disnake import Embed, Color, Member
 from art import text2art
 
 from ..utils.utils import emb, color, get
-
+from ..utils.db import Database
 
 class Fun(Cog):
     def __init__(self, bot):
@@ -133,6 +133,14 @@ class Fun(Cog):
                 _json = await resp.json()
                 fact = _json['text']
                 await ctx.send(f"**{fact}**")
+
+    @command()
+    async def prefix(self, ctx, new_prefix: str):
+        async with Database("users.db", "users", "(id INTEGER, warns INTEGER, prefix TEXT)") as db:
+            mem = await db.getMember(ctx.author.id)
+            await mem.setPrefix(new_prefix)
+            await emb(ctx, f"Prefix set to `{new_prefix}`! If you forget it, ping the bot!")
+
 
     @command()
     async def yomama(self, ctx, *, user: Member = None):
