@@ -16,6 +16,50 @@ from ..utils.db import Database
 class Fun(Cog):
     def __init__(self, bot):
         self.bot = bot
+
+    @staticmethod
+    def get_lang(code):
+        if code.startswith("```py") or code.startswith("```python"):
+            return "python"
+        elif code.startswith("```js") or code.startswith("```javascript"):
+            return "javascript"
+        elif code.startswith("```cs") or code.startswith("```csharp"):
+            return "csharp"
+        elif code.startswith("```c"):
+            return "c"
+        elif code.startswith("```cpp"):
+            return "cpp"
+        elif code.startswith("```java"):
+            return "java"
+        elif code.startswith("```ts") or code.startswith("```typescript"):
+            return "typescript"
+        elif code.startswith("```php"):
+            return "php"
+        elif code.startswith("```bf"):
+            return "brainfuck"
+        else:
+            return "invalid"
+
+    @staticmethod
+    def clean_code(code):
+        if code.startswith("```py") or code.startswith("```js") or code.startswith("```cs") or code.startswith("```ts") or code.startswith("```bf"):
+            code = code[5:-3]
+        elif code.startswith("```c"):
+            code = code[4:-3]
+        elif code.startswith("```java"):
+            code = code[7:-3]
+        elif code.startswith("```cpp") or code.startswith("```php"):
+            code = code[6:-3]
+        elif code.startswith("```brainfuck"):
+            code = code[12:-3]
+        elif code.startswith("```csharp"):
+            code = code[9:-3]
+        elif code.startswith("```python"):
+            code = code[9:-3]
+        elif code.startswith("```typescript") or code.startswith('```javascript'):
+            code = code[13:-3]
+        return code
+
     @staticmethod
     def scrambled(orig):
         dest = orig[:]
@@ -27,6 +71,30 @@ class Fun(Cog):
         try:
             await emb(ctx, f"{wikipedia.summary(topic)}")
         except: await ctx.send("Topic not found in wikipedia")
+
+    @command(aliases = ['execute_code'])
+    async def execute(self, ctx, *, code):
+        lang = self.get_lang(code)
+        if lang == "invalid":
+            await ctx.send(embed = Embed(
+                description = f"Available languages:\n- python\n- javascript\n- typescript\n- csharp (c#)\n- c\n- java\n- cpp\nDM osam7a#1017 for language suggestions",
+                color = Color.red()))
+            await ctx.send(embed = Embed(
+                description = f"How to use:\nUse codeblocks, three back ticks (`) at the beginning, then write the name of the language you want, then new line and type your code, then new line at the last part, type another three backticks but without the language",
+                color = Color.red()))
+            return
+        cleaned_code = self.clean_code(code)
+        async with aiohttp.ClientSession() as cs:
+            async with cs.post("https://emkc.org/api/v1/piston/execute",
+                               json = { "language": lang, "source": cleaned_code }) as resp:
+                _json = await resp.json()
+        bannedWords = ['faggot', 'fag', 'fagg', 'f*ggot', 'nigga', 'nigger', 'n*gga', 'n*gger', 'discord.gg/invite',
+                       '/invite', 'https:']
+        for i in bannedWords:
+            if i in _json['output']: return
+        if len(_json['output']) > 125: _json['output'] = _json['output'][:125]
+        await emb(ctx, f"```\n{_json['output']}\n```")
+
     @command()
     async def trivia(self, ctx):
         await ctx.send("**Command in development, if you find any bugs, dm osam7a#1017**")
@@ -166,6 +234,11 @@ class Fun(Cog):
 
     @command(aliases = ['ascii', 'text2art'])
     async def textart(self, ctx, *, message):
+        msg = ctx.message
+        bannedWords = ['faggot', 'fag', 'fagg', 'f*ggot', 'nigga', 'nigger', 'n*gga', 'n*gger', 'discord.gg/invite',
+                       '/invite', 'https:']
+        for i in bannedWords:
+            if i in msg.content: return
         if len(message) > 15:
             return await ctx.reply("Message too long")
         ref = ctx.message.reference
