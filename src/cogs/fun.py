@@ -1,5 +1,6 @@
 import base64
 import json
+import wikipedia
 
 import aiohttp
 import random
@@ -21,6 +22,11 @@ class Fun(Cog):
         random.shuffle(dest)
         return dest
 
+    @command(aliases=['wiki'])
+    async def wikipedia(self, ctx, *, topic):
+        try:
+            await emb(ctx, f"{wikipedia.summary(topic)}")
+        except: await ctx.send("Topic not found in wikipedia")
     @command()
     async def trivia(self, ctx):
         await ctx.send("**Command in development, if you find any bugs, dm osam7a#1017**")
@@ -102,7 +108,7 @@ class Fun(Cog):
                     choices.append(base64.b64decode(i.encode()).decode())
                 choicesStr = ""
                 chDict = { }
-                for _i, v in enumerate(self.scrambled(choices)):
+                for _i, v in enumerate(self.scrambled(self.scrambled(choices))):
                     choicesStr += f"**{_i + 1}.** {v}\n"
                     chDict[_i + 1] = v
                 await ctx.reply(embed = Embed(
@@ -160,7 +166,7 @@ class Fun(Cog):
 
     @command(aliases = ['ascii', 'text2art'])
     async def textart(self, ctx, *, message):
-        if len(message) > 13:
+        if len(message) > 15:
             return await ctx.reply("Message too long")
         ref = ctx.message.reference
         try:

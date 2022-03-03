@@ -32,6 +32,6 @@ class Listeners(Cog):
             async with Database("users.db", "users", "(id INTEGER, warns INTEGER, prefix TEXT)") as db:
                 mem = await db.getMember(msg.author.id)
                 prefix = await mem.prefix
-            await emb(msg.channel, f"```yaml\nDefault prefix: \"geo \"\nYour prefix: {prefix}\n```\nExample usage:\n```\n{prefix}help\n```", user = msg.author)
+            await emb(msg.channel, f"```yaml\nDefault prefix: \"geo \"\nYour prefix: {prefix}\n```\nExample usage:\n```\n{prefix}help\n```\nIf you want to do `{prefix} help` instead, copy paste the following command\n```\n{prefix}prefix \"{prefix} \"\n```", user = msg.author)
 def setup(bot):
     bot.add_cog(Listeners(bot))
